@@ -1,0 +1,19 @@
+* text=auto
+*.cs               text eol=crlf diff=csharp
+*.sql              text eol=crlf
+*.feature          text eol=crlf
+*.csproj           text eol=crlf
+*.sln              text eol=crlf
+*.aspx             text eol=crlf
+*.ascx             text eol=crlf
+*.ps1              text eol=crlf
+app.config         text eol=crlf
+web.config         text eol=crlf
+appSettings.config text eol=crlf
+packages.config    text eol=crlf
+
+*.dll     binary
+*.pdb     binary
+*.png     binary
+*.jepg    binary
+*.sdf     binary
