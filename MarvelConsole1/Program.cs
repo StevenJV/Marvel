@@ -33,7 +33,8 @@ namespace MarvelConsole1
       var marvelResult = JObject.Parse(content);
 
       var marvelDataInfo = JsonConvert.DeserializeObject<MarvelDataInfo>(marvelResult.ToString());
-
+      if (marvelDataInfo.code == "InvalidCredentials") { throw new Exception("message from Marvel: Invalid credentials"); }
+      
       var resultItemsToken = marvelResult["data"]["results"][0]["comics"]["items"];
       IList<ComicsItem> comicsItems = resultItemsToken.Select(item => JsonConvert.DeserializeObject<ComicsItem>(item.ToString())).ToList();
 
